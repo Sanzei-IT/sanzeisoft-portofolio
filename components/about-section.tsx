@@ -81,7 +81,7 @@ export default function AboutSection() {
             <div className="absolute inset-0 bg-gradient-to-tr from-slate-300/30 to-slate-500/30 dark:from-slate-700/30 dark:to-slate-900/30 rounded-2xl rotate-6 transform-gpu"></div>
             <div className="absolute inset-0 bg-gradient-to-bl from-slate-300/20 to-slate-500/20 dark:from-slate-700/20 dark:to-slate-900/20 rounded-2xl -rotate-6 transform-gpu"></div>
             <div className="relative rounded-2xl overflow-hidden border-2 border-slate-200/20 dark:border-slate-800/20 bg-background">
-              <img src="/about-image.png" alt="About me" className="w-full h-full object-cover" />
+              <img src="https://img12.pixhost.to/images/1107/578804238_imgtmp.jpg" alt="About me" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
