@@ -115,16 +115,10 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-br from-slate-300/40 to-slate-500/40 dark:from-slate-700/40 dark:to-slate-900/40 rounded-full blur-3xl animate-pulse"></div>
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-4/5 h-4/5 rounded-full overflow-hidden border-4 border-slate-200/40 dark:border-slate-800/40 bg-background">
-                <img src="/about-image.png" alt="Profile" className="w-full h-full object-cover" />
+                <img src="https://img12.pixhost.to/images/1107/578803906_imgtmp.jpg" alt="Profile" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-slate-400 dark:border-slate-600 flex justify-center">
-          <div className="w-1.5 h-3 bg-slate-400 dark:bg-slate-600 rounded-full mt-1 animate-scroll"></div>
         </div>
       </div>
     </section>
