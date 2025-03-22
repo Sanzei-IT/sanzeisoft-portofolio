@@ -29,7 +29,7 @@ const projects: Project[] = [
     title: "OSIS Katuba Website",
     description:
       "Official website for the Student Council (OSIS) of SMKN 1 Banyuanyar. Features event information, organizational structure, and student resources.",
-    image: "/project-oskatuba.png",
+    image: "https://img12.pixhost.to/images/1107/578806121_imgtmp.jpg",
     tags: ["HTML", "CSS", "JavaScript", "Netlify"],
     demoUrl: "https://oskatuba.netlify.app",
     githubUrl: "#",
@@ -38,7 +38,7 @@ const projects: Project[] = [
     title: "XI TKJ Class Website",
     description:
       "Collaborative platform for the XI TKJ ACP class, featuring class schedules, learning materials, and student projects. Designed to enhance communication and resource sharing.",
-    image: "/project-xitkj.png",
+    image: "https://img12.pixhost.to/images/1107/578806308_imgtmp.jpg",
     tags: ["Next.js", "React", "Vercel", "Tailwind CSS"],
     demoUrl: "https://xitkj-acp.vercel.app",
     githubUrl: "#",
