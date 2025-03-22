@@ -20,7 +20,7 @@ const projects: Project[] = [
     title: "Sanzei Soft Website",
     description:
       "Official website for Sanzei Soft with modern design, responsive layout, and interactive elements. Built with the latest web technologies to showcase our services and expertise.",
-    image: "/project-sanzei.png",
+    image: "https://img12.pixhost.to/images/1107/578805577_imgtmp.jpg",
     tags: ["Next.js", "Tailwind CSS", "JavaScript", "Netlify"],
     demoUrl: "https://sanzeisoft.netlify.app",
     githubUrl: "#",
