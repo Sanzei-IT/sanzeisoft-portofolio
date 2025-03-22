@@ -58,7 +58,7 @@ export default function HeroSection() {
           <h1 className="text-4xl md:text-6xl font-bold">
             <span className="block">Hi, I'm</span>
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-700 to-slate-900 dark:from-slate-300 dark:to-slate-100">
-              John Doe
+              Sanzei Soft
             </span>
           </h1>
           <p className="text-xl text-foreground/80 max-w-md">
