@@ -43,6 +43,22 @@ const projects: Project[] = [
     demoUrl: "https://xitkj-acp.vercel.app",
     githubUrl: "#",
   },
+  {
+    title: "Gudang District",
+    description: "Website Gudang District.",
+    image: "",
+    tags: ["Website", "Retail"],
+    demoUrl: "https://gudangdistrict.com",
+    githubUrl: "https://github.com/Sanzei-IT",
+  },
+  {
+    title: "Naier Store",
+    description: "Website Naier Store.",
+    image: "",
+    tags: ["Website", "Store"],
+    demoUrl: "https://naierstore.my.id",
+    githubUrl: "https://github.com/Sanzei-IT",
+  },
 ]
 
 export default function ProjectsSection() {
@@ -100,11 +116,22 @@ export default function ProjectsSection() {
               <Card className="overflow-hidden h-full group hover:border-slate-400 dark:hover:border-slate-600 transition-all duration-300 hover:shadow-lg border-slate-200 dark:border-slate-800 flex flex-col">
                 <div className="relative overflow-hidden h-48">
                   <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <img
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  ) : (
+                    <div
+                      role="img"
+                      aria-label={`Pratinjau ${project.title}`}
+                      className="w-full h-full flex flex-col items-center justify-center gap-2 bg-gradient-to-br from-slate-200 to-slate-400 dark:from-slate-800 dark:to-slate-950 text-slate-800 dark:text-slate-100 transition-transform duration-500 group-hover:scale-105"
+                    >
+                      <span className="text-4xl font-bold">{project.title === "Gudang District" ? "GD" : "NS"}</span>
+                      <span className="text-sm opacity-75">{new URL(project.demoUrl).hostname}</span>
+                    </div>
+                  )}
                 </div>
                 <CardContent className="pt-6 flex-grow">
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>

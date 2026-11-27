@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Mail, MapPin, Phone, Send } from "lucide-react"
+import { Facebook, Github, Instagram, Mail, MapPin, Phone, Send } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 export default function ContactSection() {
@@ -44,12 +44,11 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log(formState)
-    // Reset form
-    setFormState({ name: "", email: "", subject: "", message: "" })
-    // Show success message
-    alert("Message sent successfully!")
+    const subject = encodeURIComponent(formState.subject || `Pesan dari ${formState.name}`)
+    const body = encodeURIComponent(
+      `Nama: ${formState.name}\nEmail: ${formState.email}\n\n${formState.message}`,
+    )
+    window.location.href = `mailto:sanzeidev@gmail.com?subject=${subject}&body=${body}`
   }
 
   return (
@@ -87,7 +86,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium">Email</h4>
-                    <p className="text-foreground/80">sandissoft@sanzeisoft.com</p>
+                    <a href="mailto:sanzeidev@gmail.com" className="text-foreground/80 hover:underline">sanzeidev@gmail.com</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -96,7 +95,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <h4 className="font-medium">Phone</h4>
-                    <p className="text-foreground/80">6282335598046</p>
+                    <a href="https://wa.me/6285167159260" target="_blank" rel="noreferrer" className="text-foreground/80 hover:underline">085167159260</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -113,89 +112,17 @@ export default function ContactSection() {
               <div className="mt-12">
                 <h3 className="text-2xl font-bold mb-6">Follow Me</h3>
                 <div className="flex gap-4">
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                    </svg>
+                  <Button variant="outline" size="icon" className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600" asChild>
+                    <a href="https://www.instagram.com/sanzei.soft/" target="_blank" rel="noreferrer" aria-label="Instagram Sanzei Soft"><Instagram className="h-5 w-5" /></a>
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                    </svg>
+                  <Button variant="outline" size="icon" className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600" asChild>
+                    <a href="https://www.facebook.com/sanzei.mashiro" target="_blank" rel="noreferrer" aria-label="Facebook Sanzei Mashiro"><Facebook className="h-5 w-5" /></a>
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                      <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-                    </svg>
+                  <Button variant="outline" size="icon" className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600" asChild>
+                    <a href="https://github.com/Sanzei-IT" target="_blank" rel="noreferrer" aria-label="GitHub Sanzei IT"><Github className="h-5 w-5" /></a>
                   </Button>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="h-5 w-5"
-                    >
-                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                      <rect width="4" height="12" x="2" y="9" />
-                      <circle cx="4" cy="4" r="2" />
-                    </svg>
+                  <Button variant="outline" size="icon" className="rounded-full border-slate-200 dark:border-slate-800 hover:border-slate-400 dark:hover:border-slate-600" asChild>
+                    <a href="https://wa.me/6285167159260" target="_blank" rel="noreferrer" aria-label="WhatsApp Sanzei Soft"><Phone className="h-5 w-5" /></a>
                   </Button>
                 </div>
               </div>
